@@ -1,13 +1,12 @@
-var todaysDate = moment () . format('dddd, MMMM Do YYYY');
+var todaysDate = moment () . format('MM/DD/YYYY HH:mm:ss');
 $("#currentDay").html(todaysDate);
 
 $(document).ready(function(){
     $(".saveBtn").on("click", function () {
         var text = $(this).siblings(".description").val();
-        // var time = $(this).parent().alert("id");
-        var time = $(this).parent("id").alert();
+        var time = $(this).parent("id").val();
 
-        localStorage.setItem(time, text);
+        localStorage.setItem("time", "text");
 
     })
 
@@ -38,6 +37,8 @@ $(document).ready(function(){
         })
 
     }
+
+    // document.getElementById("result").innerHTML=localStorage.getItem("hour8")
 
     $("#hour8 .description").val(localStorage.getItem("hour8"));
     $("#hour9 .description").val(localStorage.getItem("hour9"));
