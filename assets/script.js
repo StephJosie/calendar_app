@@ -1,12 +1,13 @@
-var todaysDate = moment () . format('MM/DD/YYYY HH:mm:ss');
+var todaysDate = moment () . format('MM/DD/YYYY HH:mm');
 $("#currentDay").html(todaysDate);
 
 $(document).ready(function(){
     $(".saveBtn").on("click", function () {
-        var text = $(this).siblings(".description").val();
-        var time = $(this).parent("id").val();
+        
+        var text = $('.description').text();
+        var time = $('id').val()
 
-        localStorage.setItem("time", "text");
+        localStorage.setItem(text, time);
 
     })
 
@@ -40,16 +41,16 @@ $(document).ready(function(){
 
     // document.getElementById("result").innerHTML=localStorage.getItem("hour8")
 
-    $("#hour8 .description").val(localStorage.getItem("hour8"));
-    $("#hour9 .description").val(localStorage.getItem("hour9"));
-    $("#hour10 .description").val(localStorage.getItem("hour10"));
-    $("#hour11 .description").val(localStorage.getItem("hour11"));
-    $("#hour12 .description").val(localStorage.getItem("hour12"));
-    $("#hour1 .description").val(localStorage.getItem("hour1"));
-    $("#hour2 .description").val(localStorage.getItem("hour2"));
-    $("#hour3 .description").val(localStorage.getItem("hour3"));
-    $("#hour4 .description").val(localStorage.getItem("hour4"));
-    $("#hour5 .description").val(localStorage.getItem("hour5"));
+    $("#hour8 .description").text(localStorage.getItem("hour8"));
+    $("#hour9 .description").text(localStorage.getItem("hour9"));
+    $("#hour10 .description").text(localStorage.getItem("hour10"));
+    $("#hour11 .description").text(localStorage.getItem("hour11"));
+    $("#hour12 .description").text(localStorage.getItem("hour12"));
+    $("#hour1 .description").text(localStorage.getItem("hour1"));
+    $("#hour2 .description").text(localStorage.getItem("hour2"));
+    $("#hour3 .description").text(localStorage.getItem("hour3"));
+    $("#hour4 .description").text(localStorage.getItem("hour4"));
+    $("#hour5 .description").text(localStorage.getItem("hour5"));
 
     timeTracker();
 
